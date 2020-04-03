@@ -228,7 +228,7 @@ class EQ_on_faults_from_sr():
         #etablish the magnitude bin (0.1)
         ##################################################################'''
             
-        bin_mag = np.linspace(M_min,Mmax,round((Mmax-M_min),1)*10. +1)
+        bin_mag = np.linspace(M_min, Mmax, int(round((Mmax-M_min),1)*10. +1))
                 
         '''#####################################################################
         #initializing outup for OQ (incremental recurence of the earthquakes for each fault and each bin)
@@ -520,7 +520,7 @@ class EQ_on_faults_from_sr():
 
 
 
-            bin_mfd_ucerf = np.linspace(6.0,7.9,len(mfd_ucerf))
+            bin_mfd_ucerf = np.linspace(6.0, 7.9, len(mfd_ucerf))
             
             interp_ucerf_mfd = interp1d(bin_mfd_ucerf,mfd_ucerf) 
             
